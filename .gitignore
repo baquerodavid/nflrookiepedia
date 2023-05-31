@@ -132,3 +132,6 @@ dist
 # Folders with UI settings in the editors
 .codesandbox/
 .vscode/
+
+#DS Stores file
+.DS_Store
