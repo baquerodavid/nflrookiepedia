@@ -1,0 +1,91 @@
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.zoomcard {
+	transition: transform 0.2s; /* Animation */
+}
+
+.zoomcard:hover {
+	transform: scale(
+		1.05
+	); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.fadeincard {
+	animation: fadeIn 3s;
+	-webkit-animation: fadeIn 3s;
+	-moz-animation: fadeIn 3s;
+	-o-animation: fadeIn 3s;
+	-ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Botton to go to the top page */
+
+#topBtn {
+	display: none;
+	position: fixed; /* Fixed/sticky position */
+	bottom: 30px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+}
+
+/* App bar styles */
+
+.appbarnfl {
+	background-color: #212A3E;
+}
+
+/* Footer styles */
+
+.footernfl {
+	background-color: #212A3E;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+/* Card section styles */
+
+.bgnfl {
+	background-color: #9BA4B5;
+}
+
+/* Card styles */
+
+.bgcardnfl {
+	background-color: #F1F6F9;
+}
+
+.cardtextnfl {
+	font-weight: 300;
+}
+
+.cardtextnfl ul {
+	margin-top: -16px;
+}
+
+.cardtextnfl ul ul {
+	margin-top: 0;
+}
+
+.btnreadmore:hover {
+	color: #394867;
+	background-color: rgb(155, 164, 181, .10) ;
+	border-color: #9BA4B5;
+}
+
+.btnreadmore:active {
+	color: #ffffff;
+	background-color: #212A3E;
+}
