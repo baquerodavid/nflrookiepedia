@@ -135,3 +135,5 @@ dist
 
 #DS Stores file
 .DS_Store
+src/.DS_Store
+**/.DS_Store
