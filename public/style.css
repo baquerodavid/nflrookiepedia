@@ -45,6 +45,10 @@ body {
 	background-color: #212A3E;
 }
 
+.text-opac-sec-timer {
+	opacity: .5;
+}
+
 /* Footer styles */
 
 .footernfl {
