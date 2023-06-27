@@ -6,8 +6,7 @@ import { marked } from 'marked';
 import ModalRookiepedia from "./ModalRookiepedia";
 import SkeletonCard from "./SkeletonCard";
 
-
-function CardConcept() {
+function CardConcept({ searchTerm }) {
 	const [records, setRecords] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -17,7 +16,7 @@ function CardConcept() {
 		base(process.env.REACT_APP_ROOKIEPEDIA_TABLENAME)
 			.select({
 				// Add any necessary filters, sorting options, or other parameters here
-				sort: [{field: "cardtitle"}]
+				sort: [{ field: "cardtitle" }]
 			})
 			.eachPage((records, fetchNextPage) => {
 				setRecords((prevRecords) => [...prevRecords, ...records]);
@@ -30,6 +29,12 @@ function CardConcept() {
 			});
 	}, []);
 
+	const filteredRecords = records.filter((record) => {
+		const { cardheader, cardtitle, description } = record.fields;
+		const searchString = `${cardheader.toLowerCase()} ${cardtitle.toLowerCase()} ${description.toLowerCase()}`;
+		return searchString.includes(searchTerm.toLowerCase());
+	});
+
 	return (
 		<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 			{isLoading ? (
@@ -38,26 +43,32 @@ function CardConcept() {
 					<SkeletonCard />
 				</>
 			) : (
-				records.map((record) => (
-					<div className="col" key={record.id}>
-						<div
-							className="card border-secondary mb-3 zoomcard fadeincard bgcardnfl h-100"
-						>
-							<Tooltip
-								title="Término en inglés"
-								placement="top-start"
-								TransitionComponent={Zoom}
-							>
-								<div className="card-header">{record.get("cardheader")}</div>
-							</Tooltip>
-							<div className="card-body">
-								<h5 className="card-title"><strong>{record.get("cardtitle")}</strong></h5>
-								<div className="card-text cardtextnfl" dangerouslySetInnerHTML={{ __html: marked(record.get("description").substring(0, 80) + "...") }}></div>							
-								<ModalRookiepedia cardTitle={record.get("cardtitle")} description={record.get("description")} />
+				filteredRecords.length > 0 ? (
+					filteredRecords.map((record) => (
+						<div className="col" key={record.id}>
+							<div className="card border-secondary mb-3 zoomcard fadeincard bgcardnfl h-100">
+								<Tooltip
+									title="Término en inglés"
+									placement="top-start"
+									TransitionComponent={Zoom}
+								>
+									<div className="card-header">{record.fields.cardheader}</div>
+								</Tooltip>
+								<div className="card-body">
+									<h5 className="card-title"><strong>{record.fields.cardtitle}</strong></h5>
+									<div className="card-text cardtextnfl" dangerouslySetInnerHTML={{ __html: marked(record.fields.description.substring(0, 80) + "...") }}></div>
+									<ModalRookiepedia cardTitle={record.fields.cardtitle} description={record.fields.description} />
+								</div>
 							</div>
 						</div>
-					</div>
-				))
+					))
+				) : (
+						<div className="g-0 mx-auto">
+							<div className="alert alert-light border-secondary fadeincard">
+									<h4 className="card-title text-center text-black lh-base">🏈 Sin resultados. Inténtalo con otra búsqueda, por favor 🏈</h4>
+							</div>
+						</div>
+				)
 			)}
 		</div>
 	);
