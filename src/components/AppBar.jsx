@@ -25,10 +25,10 @@ function AppBar({ handleSearch }) {
           <img src={logo} alt="Logo de NFL Rookiepedia" width="40" height="40" />
           <span className="ms-3 fs-4 align-middle">NFL Rookiepedia</span>
       </a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNflr" aria-controls="navbarNflr" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-        <div className="navbar-collapse collapse justify-content-center" id="navbarsExample03">
+        <div className="navbar-collapse collapse justify-content-center" id="navbarNflr">
         <CountdownTimer />
 
         <Tooltip
