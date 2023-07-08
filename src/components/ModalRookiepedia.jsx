@@ -15,22 +15,17 @@ const ButtonReadMore = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
   padding: '4px 8px',
-  border: '1px solid',
+  border: '1px solid #D0D5DD',
+  borderRadius: "8px",
   lineHeight: 1.5,
-  borderColor: '#394867',
-  color: "#394867",
+  color: "#344054",
   fontFamily: [
     'Roboto',
   ].join(','),
   '&:hover': {
-    backgroundColor: "rgb(155, 164, 181, .10)",
-    borderColor: '#9BA4B5',
-    boxShadow: '0 0 0 0.1rem rgba(33,42,62,.5)',
-  },
-  '&:active': {
-    boxShadow: 'none',
-    backgroundColor: '#212A3E',
-    borderColor: '#212A3E',
+    backgroundColor: "#F8F8F8",
+    borderColor: '#D0D5DD',
+    boxShadow: '0px 1px 2px 0px rgb(16, 24, 40, 0.05)',
   },
 });
 
@@ -84,11 +79,17 @@ function ModalRookiepedia({ cardTitle, description }) {
 
   return (
     <div>
-      <ButtonReadMore variant="outlined" size="small" onClick={handleClickOpen}
+      <ButtonReadMore size="small" onClick={handleClickOpen}
         sx={{
           position: "absolute",
           left: 16,
-          bottom: 12}}>
+          bottom: 12,
+          '&:active': {
+            bgcolor: 'text.secondary',
+            color: 'background.paper',
+            boxShadow: '0px 0px 0px 3px #F2F4F7, 0px 1px 2px 0px rgb(16, 24, 40, 0.05)',
+          },
+        }}>
         Leer más
       </ButtonReadMore>
       <BootstrapDialog

@@ -35,10 +35,10 @@ const CountdownTimer = () => {
     }
 
     return (
-        <div className="d-flex text-info-emphasis">
+        <div className="container text-info-emphasis nav justify-content-center mb-sm-2 mb-lg-0">
             <div className="fs-4"><span className="me-2 fs-5 text-info">Kickoff 2023 en: </span>{countdown.days} <span className="fs-6 fw-light">Días</span></div>
-            <div className="ms-2 fs-4 ">{countdown.hours} <span className="fs-6 fw-light">Horas</span> </div>
-            <div className="ms-2 fs-4 ">{countdown.minutes} <span className="fs-6 fw-light">Min</span> </div>
+            <div className="ms-2 fs-4">{countdown.hours} <span className="fs-6 fw-light">Horas</span> </div>
+            <div className="ms-2 fs-4">{countdown.minutes} <span className="fs-6 fw-light">Min</span> </div>
             <div className="ms-2 fs-4 text-opac-sec-timer">{countdown.seconds} <span className="fs-6 fw-light">Seg</span></div>
         </div>
     );

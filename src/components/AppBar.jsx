@@ -19,13 +19,16 @@ function AppBar({ handleSearch }) {
   };
 
   return (
-    <nav className="navbar sticky-top appbarnfl bg-black" data-bs-theme="dark">
+    <nav className="navbar navbar-expand-lg sticky-top bg-black d-flex flex-wrap align-items-center justify-content-md-between px-4" data-bs-theme="dark">
       <div className="container-fluid justify-content-between">
-        <a className="navbar-brand d-inline" href="https://www.nflrookiepedia.com">
+      <a className="navbar-brand mb-sm-2 mb-lg-0" href="https://www.nflrookiepedia.com">
           <img src={logo} alt="Logo de NFL Rookiepedia" width="40" height="40" />
           <span className="ms-3 fs-4 align-middle">NFL Rookiepedia</span>
-        </a>
-
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div className="navbar-collapse collapse justify-content-center" id="navbarsExample03">
         <CountdownTimer />
 
         <Tooltip
@@ -33,7 +36,7 @@ function AppBar({ handleSearch }) {
           placement="bottom-start"
           TransitionComponent={Zoom}
         >
-        <form className="d-flex" role="search">
+            <form className="text-end mb-sm-2 mb-lg-0" role="search">
           <input
             className="form-control me-2 form-control-dark text-bg-dark"
             type="search"
@@ -44,6 +47,7 @@ function AppBar({ handleSearch }) {
           />
           </form>
         </Tooltip>
+        </div>
       </div>
     </nav>
   );

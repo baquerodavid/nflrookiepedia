@@ -36,7 +36,7 @@ function CardConcept({ searchTerm }) {
 	});
 
 	return (
-		<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+		<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
 			{isLoading ? (
 				// Render skeleton components while loading
 				<>
@@ -46,7 +46,7 @@ function CardConcept({ searchTerm }) {
 				filteredRecords.length > 0 ? (
 					filteredRecords.map((record) => (
 						<div className="col" key={record.id}>
-							<div className="card border-secondary mb-3 zoomcard fadeincard bgcardnfl h-100">
+							<div className="card mb-4 zoomcard fadeincard bgcardnfl h-100">
 								<Tooltip
 									title="Término en inglés"
 									placement="top-start"
@@ -63,9 +63,10 @@ function CardConcept({ searchTerm }) {
 						</div>
 					))
 				) : (
-						<div className="g-0 mx-auto">
-							<div className="alert alert-light border-secondary fadeincard">
-									<h4 className="card-title text-center text-black lh-base">🏈 Sin resultados. Inténtalo con otra búsqueda, por favor 🏈</h4>
+						<div className="mx-auto">
+								<div className="alert alert-light fadeincard bgcardnfl text-center text-secondary">
+									<p className="mt-4">¡Ups! Parece que no hay resultados en la zona de touchdown.</p>
+									<p className="mb-4">¡Vamos a intentarlo de nuevo! Lanza otro pase de búsqueda, por favor 🏈 </p>
 							</div>
 						</div>
 				)
