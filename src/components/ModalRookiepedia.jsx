@@ -79,7 +79,7 @@ function ModalRookiepedia({ cardTitle, description }) {
 
   return (
     <div>
-      <ButtonReadMore size="small" onClick={handleClickOpen}
+      <ButtonReadMore id="btn-readmore" size="small" onClick={handleClickOpen}
         sx={{
           position: "absolute",
           left: 16,
