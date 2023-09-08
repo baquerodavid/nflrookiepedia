@@ -28,7 +28,7 @@ function AppBar({ handleSearch }) {
         <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNflr" aria-controls="navbarNflr" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-        <div className="navbar-collapse collapse justify-content-center" id="navbarNflr">
+        <div className="navbar-collapse collapse justify-content-end" id="navbarNflr">
         <CountdownTimer />
 
         <Tooltip
