@@ -39,6 +39,7 @@ function AppBar({ handleSearch }) {
             <form className="text-end mb-sm-2 mb-lg-0" role="search">
           <input
             className="form-control me-2 form-control-dark text-bg-dark"
+            id="search-field"
             type="search"
             placeholder="Buscar"
             aria-label="Search"
