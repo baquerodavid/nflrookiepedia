@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logoNFLR_circle.svg";
+import telegramicon from "../assets/images/Telegram_white.svg";
 import CountdownTimer from "./CountdownTimer";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
@@ -21,7 +22,7 @@ function AppBar({ handleSearch }) {
   return (
     <nav className="navbar navbar-expand-lg sticky-top bg-black d-flex flex-wrap align-items-center justify-content-md-between px-4" data-bs-theme="dark">
       <div className="container-fluid justify-content-between">
-      <a className="navbar-brand mb-sm-2 mb-lg-0" href="https://www.nflrookiepedia.com">
+      <a className="navbar-brand mb-2 mb-lg-0" href="https://www.nflrookiepedia.com">
           <img src={logo} alt="Logo de NFL Rookiepedia" width="40" height="40" />
           <span className="ms-3 fs-4 align-middle">NFL Rookiepedia</span>
       </a>
@@ -30,6 +31,10 @@ function AppBar({ handleSearch }) {
       </button>
         <div className="navbar-collapse collapse justify-content-end" id="navbarNflr">
         <CountdownTimer />
+
+          <a href="https://t.me/RookieBot_NFLRookiepedia_bot">
+            <img className="me-sm-4 mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="Telegram" width="32" height="32" />
+          </a>
 
         <Tooltip
           title="Escribe al menos 5 caracteres"

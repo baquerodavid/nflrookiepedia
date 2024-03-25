@@ -40,9 +40,13 @@ body {
 	background-color: #FFC007;
 }
 
-/* App bar styles */
+/* App bar or header styles */
 
 .text-opac-sec-timer {
+	opacity: .5;
+}
+
+.social-media-icon:hover {
 	opacity: .5;
 }
 

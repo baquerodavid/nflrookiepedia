@@ -1,4 +1,5 @@
 import React from "react";
+import telegramicon from "../assets/images/Telegram_white.svg";
 
 function Footer() {
 	const year = new Date().getFullYear();
@@ -14,11 +15,14 @@ function Footer() {
 						<li className="nav-item ms-3 "><a href="https://platform.illow.io/#/policy/cookie/39b2b52c-077b-4b0d-af7e-59ba3eabb11d?lng=es" className="link-secondary link-underline link-underline-opacity-0">Cookies</a></li>
 					</ul>
 				</div>
-				<div className="d-flex">
+				<div className="d-flex justify-content-between">
 					<p className="mb-1 small">
 					Diseñada y desarrollada por{" "}
 						<a href="https://davidbaquero.com/" target="_blank" className="link-secondary link-offset-2">David Baquero</a> 
 					</p>
+					<a href="https://t.me/RookieBot_NFLRookiepedia_bot">
+						<img className="mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="Telegram" width="28" height="28" />
+					</a>
 				</div>
 			</div>
 		</footer>
