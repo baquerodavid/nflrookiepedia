@@ -3,6 +3,8 @@ import logo from "../assets/images/logoNFLR_circle.svg";
 import telegramicon from "../assets/images/Telegram_white.svg";
 import CountdownTimer from "./CountdownTimer";
 import Tooltip from "@mui/material/Tooltip";
+import TelegramIcon from '@mui/icons-material/Telegram';
+import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
 import Zoom from "@mui/material/Zoom";
 
 function AppBar({ handleSearch }) {
@@ -32,13 +34,26 @@ function AppBar({ handleSearch }) {
         <div className="navbar-collapse collapse justify-content-end" id="navbarNflr">
         <CountdownTimer />
 
-          <a href="https://t.me/RookieBot_NFLRookiepedia_bot">
-            <img className="me-sm-4 mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="Telegram" width="32" height="32" />
+          <Tooltip title="Envía tu feedback">
+            <a href="https://forms.gle/ugVTiYBMzhBx3vio8" className="me-4 mb-2 mb-lg-0 social-media-icon" target="_blank">
+              <FeedbackOutlinedIcon
+                fontSize="large"
+                sx={{ color: "white" }} />
+            </a>
+          </Tooltip>
+          
+          <Tooltip title="RookieBotNFL Telegram">
+            <a href="https://t.me/RookieBot_NFLRookiepedia_bot" className="me-4 mb-2 mb-lg-0 social-media-icon" target="_blank">
+              <TelegramIcon
+                fontSize="large"
+                sx={{ color: "white" }} />
+              {/* <img className="me-sm-4 mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="RookieBotNFL en Telegram" width="32" height="32" /> */}
           </a>
+          </Tooltip>
 
         <Tooltip
           title="Escribe al menos 5 caracteres"
-          placement="bottom-start"
+          placement="bottom"
           TransitionComponent={Zoom}
         >
             <form className="text-end mb-sm-2 mb-lg-0" role="search">
