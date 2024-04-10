@@ -1,4 +1,6 @@
 import React from "react";
+import Tooltip from "@mui/material/Tooltip";
+import TelegramIcon from '@mui/icons-material/Telegram';
 import telegramicon from "../assets/images/Telegram_white.svg";
 
 function Footer() {
@@ -20,9 +22,13 @@ function Footer() {
 					Diseñada y desarrollada por{" "}
 						<a href="https://davidbaquero.com/" target="_blank" className="link-secondary link-offset-2">David Baquero</a> 
 					</p>
-					<a href="https://t.me/RookieBot_NFLRookiepedia_bot">
-						<img className="mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="Telegram" width="28" height="28" />
-					</a>
+					<Tooltip title="RookieBotNFL Telegram">
+						<a href="https://t.me/RookieBot_NFLRookiepedia_bot" className="mb-2 mb-lg-0 social-media-icon" target="_blank">
+							<TelegramIcon
+								fontSize="medium"
+								sx={{ color: "white" }} />
+						</a>
+					</Tooltip>
 				</div>
 			</div>
 		</footer>
