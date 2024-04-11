@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logoNFLR_circle.svg";
-import telegramicon from "../assets/images/Telegram_white.svg";
 import CountdownTimer from "./CountdownTimer";
 import Tooltip from "@mui/material/Tooltip";
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -47,7 +46,6 @@ function AppBar({ handleSearch }) {
               <TelegramIcon
                 fontSize="large"
                 sx={{ color: "white" }} />
-              {/* <img className="me-sm-4 mb-2 mb-lg-0 social-media-icon" src={telegramicon} alt="RookieBotNFL en Telegram" width="32" height="32" /> */}
           </a>
           </Tooltip>
 
