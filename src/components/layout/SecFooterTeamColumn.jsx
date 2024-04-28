@@ -1,6 +1,6 @@
 import React from "react";
 
-function TeamColumn({ conference, teams }) {
+function SecFooterTeamColumn({ conference, teams }) {
     return (
         <div className="col-md-6 col-lg-3 mb-3 mb-lg-0">
             <h3 className="text-center pb-2">{conference}</h3>
@@ -18,4 +18,4 @@ function TeamColumn({ conference, teams }) {
     );
 }
 
-export default TeamColumn;
+export default SecFooterTeamColumn;

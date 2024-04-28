@@ -67,7 +67,7 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-function ModalRookiepedia({ cardTitle, description }) {
+function ModalCardConcept({ cardTitle, description }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -110,4 +110,4 @@ function ModalRookiepedia({ cardTitle, description }) {
   );
 }
 
-export default ModalRookiepedia;
+export default ModalCardConcept;

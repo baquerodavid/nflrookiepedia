@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Airtable from 'airtable';
-import TeamColumn from './TeamColumn';
+import SecFooterTeamColumn from './SecFooterTeamColumn';
 
-function Teams() {
+function SecondaryFooterTeams() {
     const [teams, setTeams] = useState([]);
 
     useEffect(() => {
@@ -43,13 +43,13 @@ function Teams() {
                 <div className="row mb-3 mx-0 justify-content-center">
                     {/* Render AFC teams */}
                     {AFC.map((conference) => (
-                        <TeamColumn key={conference} conference={conference} teams={groupedTeams[conference]} />
+                        <SecFooterTeamColumn key={conference} conference={conference} teams={groupedTeams[conference]} />
                     ))}
                 </div>
                 <div className="row mb-3 mx-0 justify-content-center">
                     {/* Render NFC teams */}
                     {NFC.map((conference) => (
-                        <TeamColumn key={conference} conference={conference} teams={groupedTeams[conference]} />
+                        <SecFooterTeamColumn key={conference} conference={conference} teams={groupedTeams[conference]} />
                     ))}
                 </div>
             </div>
@@ -57,4 +57,4 @@ function Teams() {
     );
 }
 
-export default Teams;
+export default SecondaryFooterTeams;
