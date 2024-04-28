@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /assets/

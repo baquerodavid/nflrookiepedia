@@ -40,7 +40,7 @@ body {
 	background-color: #FFC007;
 }
 
-/* App bar or header styles */
+/* NavBar or header styles */
 
 .text-opac-sec-timer {
 	opacity: .5;
@@ -50,19 +50,34 @@ body {
 	opacity: .5;
 }
 
+#navbarstyle a {
+	text-decoration: none;
+	color: #dee2e6;
+	letter-spacing: 0.50px;
+}
+
+#navbarstyle a.active {
+	border-bottom: 1px solid #FFC007;
+	color: #FFFFFF !important;
+}
+
+#navbarstyle a:hover {
+	color: #FFFFFF !important;
+}
+
 /* BannerTeams styles */
 
 .btnanchorteams {
 	color: #FFD558;
 }
 
-/* Card section styles */
+/* Card home section styles */
 
 .bgnfl {
 	background-color: #fff;
 }
 
-/* Card styles */
+/* Card terms styles */
 
 .bgcardnfl {
 	background-color: #FFF;
@@ -80,4 +95,18 @@ body {
 
 .cardtextnfl ul ul {
 	margin-top: 0;
+}
+
+/* TEAMS PAGE styles */
+
+.footer-card-teams {
+	color: #D9D9D9;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footer-card-teams:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+	text-underline-offset: .375em;
 }

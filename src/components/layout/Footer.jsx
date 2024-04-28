@@ -1,7 +1,6 @@
 import React from "react";
 import Tooltip from "@mui/material/Tooltip";
 import TelegramIcon from '@mui/icons-material/Telegram';
-import telegramicon from "../assets/images/Telegram_white.svg";
 
 function Footer() {
 	const year = new Date().getFullYear();
