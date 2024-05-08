@@ -34,6 +34,7 @@ function NavBar({ handleSearch }) {
           <ul id="navbarstyle" className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><NavLink to="/" className="nav-link px-2">Inicio</NavLink></li>
             <li><NavLink to="/Teams" className="nav-link px-2">Equipos</NavLink></li>
+            <li><NavLink to="/Superbowls" className="nav-link px-2">Super Bowls</NavLink></li>
           </ul>
 
           <div className="nav mb-2 mb-md-0 justify-content-center align-items-center">
