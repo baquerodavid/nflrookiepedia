@@ -29,7 +29,7 @@ body {
 	}
 }
 
-/* Botton to go to the top page */
+/* BOTTON GO TO THE TOP PAGE */
 
 #topBtn {
 	display: none;
@@ -40,7 +40,9 @@ body {
 	background-color: #FFC007;
 }
 
-/* NavBar or header styles */
+/* ---------- LAYOUT ---------- */
+
+/* NAVBAR STYLES */
 
 .text-opac-sec-timer {
 	opacity: .5;
@@ -65,19 +67,28 @@ body {
 	color: #FFFFFF !important;
 }
 
-/* BannerTeams styles */
+/* PAGES HEADER STYLES */
+
+.pages-header {
+	width: 90%;
+}
+
+
+/* ---------- HOME PAGE ---------- */
+
+/* BANNER TEAMS STYLES */
 
 .btnanchorteams {
 	color: #FFD558;
 }
 
-/* Card home section styles */
+/* CARD HOME SECTION STYLES */
 
 .bgnfl {
 	background-color: #fff;
 }
 
-/* Card terms styles */
+/* CARD TERMS STYLES */
 
 .bgcardnfl {
 	background-color: #FFF;
@@ -97,7 +108,7 @@ body {
 	margin-top: 0;
 }
 
-/* TEAMS PAGE styles */
+/* ---------- TEAMS PAGE ---------- */
 
 .footer-card-teams {
 	color: #D9D9D9;
