@@ -11,13 +11,12 @@ import Paper from '@mui/material/Paper';
 import SkeletonTableGlossary from './SkeletonTableGlossary';
 
 function descendingComparator(a, b, orderBy) {
-    if (b[orderBy] < a[orderBy]) {
-        return -1;
-    }
-    if (b[orderBy] > a[orderBy]) {
-        return 1;
-    }
-    return 0;
+    // Normalize strings to ignore accents
+    const valueA = a[orderBy].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const valueB = b[orderBy].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    // Use localeCompare to compare strings based on local language rules for both English and Spanish
+    return valueA.localeCompare(valueB, ['en', 'es'], { sensitivity: 'base' });
 }
 
 function getComparator(order, orderBy) {

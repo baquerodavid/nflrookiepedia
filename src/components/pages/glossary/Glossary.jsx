@@ -20,13 +20,13 @@ function Glossary() {
         "Logo": "Logo",
         // Positions table
         "Posición": "Position",
-        "Posición en Inglés": "PositionEN",
-        "Posición en Español": "PositionES",
+        "En Inglés": "PositionEN",
+        "En Español": "PositionES",
         "Unidad": "Unit",
         // Stats table
         "Estadística": "Stat",
-        "Estadística en Inglés": "StatEN",
-        "Estadística en Español": "StatES",
+        "En Inglés": "StatEN",
+        "En Español": "StatES",
         // Measures table
         "Pies-Pulgadas (X' Y\")": "FeetInches",
         "Centímetros (cm)": "Centimeters",
