@@ -11,16 +11,46 @@ import Paper from '@mui/material/Paper';
 import SkeletonTableGlossary from './SkeletonTableGlossary';
 
 function descendingComparator(a, b, orderBy) {
-    // Normalize strings to ignore accents
-    const valueA = a[orderBy].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    const valueB = b[orderBy].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    // Check if the properties exist and are not null, if not, treat them as empty strings
+    const valueA = a[orderBy] ? a[orderBy].toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : '';
+    const valueB = b[orderBy] ? b[orderBy].toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "") : '';
 
-    // Use localeCompare to compare strings based on local language rules for both English and Spanish
+    // Function to parse height in format X-Y to inches
+    const parseHeight = (height) => {
+        const [feet, inches] = height.split('-').map(Number);
+        return feet * 12 + inches;
+    };
+
+    // Extract the first group of digits from the range and convert to inches
+    const firstGroupHeightA = parseHeight(valueA.split(' ')[0].trim());
+    const firstGroupHeightB = parseHeight(valueB.split(' ')[0].trim());
+
+    // Compare the first group of digits in the Height table
+    if (firstGroupHeightA < firstGroupHeightB) {
+        return -1;
+    }
+    if (firstGroupHeightA > firstGroupHeightB) {
+        return 1;
+    }
+
+    // Extract the first group of digits from the range in the Weight table
+    const firstGroupWeightA = parseInt(valueA.split('-')[0].trim(), 10);
+    const firstGroupWeightB = parseInt(valueB.split('-')[0].trim(), 10);
+
+    // Compare the first group of digits in the Weight table
+    if (firstGroupWeightA < firstGroupWeightB) {
+        return -1;
+    }
+    if (firstGroupWeightA > firstGroupWeightB) {
+        return 1;
+    }
+
+    // If the first group of digits are equal, compare the entire string
     return valueA.localeCompare(valueB, ['en', 'es'], { sensitivity: 'base' });
 }
 
 function getComparator(order, orderBy) {
-    return order === 'desc'
+    return order === 'asc'
         ? (a, b) => descendingComparator(a, b, orderBy)
         : (a, b) => -descendingComparator(a, b, orderBy);
 }
@@ -67,11 +97,11 @@ function TableGlossary({ columnHeaders, dataRows, headerKeyMap, isLoading }) {
                                 <StyledTableCell
                                     key={header}
                                     align="left"
-                                    sortDirection={orderBy === header ? order : false}
+                                    sortDirection={orderBy === headerKeyMap[header] ? order : false}
                                 >
                                     <TableSortLabel
-                                        active={orderBy === header}
-                                        direction={orderBy === header ? order : 'asc'}
+                                        active={orderBy === headerKeyMap[header]}
+                                        direction={order}
                                         onClick={(event) => handleRequestSort(event, header)}
                                     >
                                         {header}

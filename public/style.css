@@ -129,6 +129,29 @@ body {
 	background-color: #F5F5F5;
 }
 
+.glossary-header {
+	width: 90%;
+	margin: 48px auto;
+}
+
+.anchor-glossary {
+	margin: 48px auto 118px auto;
+}
+
+.glossary-section-container {
+	padding-top: 118px;
+	margin-top: -70px;
+	padding-bottom: 48px;
+}
+
+.glossary-section-container h2 {
+	margin-top: -48px;
+}
+
+.glossary-section-title {
+	padding-top: 48px;
+}
+
 .table-measure {
 	max-width: 30%;
 }
