@@ -20,13 +20,13 @@ function Glossary() {
         "Logo": "Logo",
         // Positions table
         "Posición": "Position",
-        "En Inglés": "PositionEN",
-        "En Español": "PositionES",
+        "Pos. en Inglés": "PositionEN",
+        "Pos. en Español": "PositionES",
         "Unidad": "Unit",
         // Stats table
         "Estadística": "Stat",
-        "En Inglés": "StatEN",
-        "En Español": "StatES",
+        "Est. en Inglés": "StatEN",
+        "Est. en Español": "StatES",
         // Measures table
         "Pies-Pulgadas (X' Y\")": "FeetInches",
         "Centímetros (cm)": "Centimeters",
@@ -172,21 +172,21 @@ function Glossary() {
         <div>
             <PagesHeader />
             <div className="container-fluid">
-                <div className="container-fluid my-5 pages-header">
-                    <p className="lead">Aquí podrás encontrar desde la abreviatura del nombre de los equipos hasta detalles específicos como la altura en pies y centímetros, y el peso en libras y kilogramos. Utiliza este recurso para familiarizarte con los términos más comunes y las abreviaturas más utilizadas en el football 🏈.</p>
-                    <div className="container text-center justify-content-center my-5">
-                        <Button onClick={() => document.getElementById('teams-section').scrollIntoView({ behavior: 'smooth' })} className="mx-3 mb-3 mb-md-0" sx={{ fontSize: '1.125rem' }} color="inherit">
+                <div className="container-fluid glossary-header">
+                    <p className="lead text-center">Aquí podrás encontrar desde la abreviatura del nombre de los equipos hasta detalles específicos como la altura en pies y centímetros, y el peso en libras y kilogramos. Utiliza este recurso para familiarizarte con las abreviaturas más utilizadas en el football 🏈.</p>
+                    <div className="container text-center justify-content-center anchor-glossary">
+                        <Button onClick={() => document.getElementById('teams-section').scrollIntoView({ behavior: 'smooth'})} className="mx-3 mb-3 mb-md-0" sx={{ fontSize: '1.125rem' }} color="inherit">
                             Equipos
                         </Button>
-                        <Button onClick={() => document.getElementById('positions-stats-section').scrollIntoView({ behavior: 'smooth' })} className="mx-3 mb-3 mb-md-0" sx={{ fontSize: '1.125rem' }} color="inherit">
+                        <Button onClick={() => document.getElementById('positions-stats-section').scrollIntoView({ behavior: 'smooth'})} className="mx-3 mb-3 mb-md-0" sx={{ fontSize: '1.125rem' }} color="inherit">
                             Posiciones y Estadísticas
                         </Button>
-                        <Button onClick={() => document.getElementById('measures-section').scrollIntoView({ behavior: 'smooth' })} className="mx-3" sx={{ fontSize: '1.125rem' }} color="inherit">
+                        <Button onClick={() => document.getElementById('measures-section').scrollIntoView({ behavior: 'smooth'})} className="mx-3" sx={{ fontSize: '1.125rem' }} color="inherit">
                             Medidas
                         </Button>
                     </div>
                 </div>
-                <div className="row p-5 background-glossary" id="teams-section">
+                <div className="row px-5 background-glossary glossary-section-container" id="teams-section">
                     <h2 className="text-center fw-bold pb-3">Equipos</h2>
                     <div className="col py-3">
                         <h4 className="text-center fw-bold">AFC</h4>
@@ -205,12 +205,12 @@ function Glossary() {
                             isLoading={isLoading} />
                     </div>
                 </div>
-                <div className="row p-5" id="positions-stats-section">
-                    <h2 className="text-center fw-bold pb-3">Posiciones y Estadísticas</h2>
+                <div className="row px-5 glossary-section-container" id="positions-stats-section">
+                    <h2 className="text-center fw-bold pb-3 glossary-section-title">Posiciones y Estadísticas</h2>
                     <div className="col py-3">
                         <h4 className="text-center fw-bold">POSICIONES</h4>
                         <TableGlossary
-                            columnHeaders={["Posición", "En Inglés", "En Español", "Unidad"]}
+                            columnHeaders={["Posición", "Pos. en Inglés", "Pos. en Español", "Unidad"]}
                             dataRows={positionRecords}
                             headerKeyMap={headerKeyMap}
                             isLoading={isLoading} />
@@ -218,13 +218,13 @@ function Glossary() {
                     <div className="col py-3">
                         <h4 className="text-center fw-bold">ESTADÍSTICAS</h4>
                         <TableGlossary
-                            columnHeaders={["Estadística", "En Inglés", "En Español"]}
+                            columnHeaders={["Estadística", "Est. en Inglés", "Est. en Español"]}
                             dataRows={statsRecords}
                             headerKeyMap={headerKeyMap}
                             isLoading={isLoading} />
                     </div>
                 </div>
-                <div className="row p-5 background-glossary justify-content-center" id="measures-section">
+                <div className="row px-5 background-glossary justify-content-center glossary-section-container" id="measures-section">
                     <h2 className="text-center fw-bold pb-3">Medidas</h2>
                     <div className="col py-3 table-measure">
                         <h4 className="text-center fw-bold">ALTURA</h4>
