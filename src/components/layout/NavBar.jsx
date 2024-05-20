@@ -34,10 +34,11 @@ function NavBar({ handleSearch }) {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="navbar-collapse collapse" id="navbarNflr">
-					<ul id="navbarstyle" className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<ul id="navbarstyle" className="nav col-12 col-lg-auto me-lg-auto mb-3 mb-md-0 justify-content-center">
 						<li><NavLink to="/" className="nav-link px-2">Inicio</NavLink></li>
 						<li><NavLink to="/Teams" className="nav-link px-2">Equipos</NavLink></li>
 						<li><NavLink to="/Superbowls" className="nav-link px-2">Super Bowls</NavLink></li>
+						<li><NavLink to="/Glossary" className="nav-link px-2">Glosario</NavLink></li>
 					</ul>
 
 					<div className="nav mb-2 mb-md-0 justify-content-center align-items-center">
@@ -50,7 +51,7 @@ function NavBar({ handleSearch }) {
 						</Tooltip>
 						
 						<Tooltip title="RookieBotNFL Telegram">
-						<a href="https://t.me/RookieBot_NFLRookiepedia_bot" className="me-4 mb-2 mb-lg-0 social-media-icon justify-content-center align-items-center" target="_blank">
+						<a href="https://t.me/RookieBot_NFLRookiepedia_bot" className="me-0 me-sm-4 mb-2 mb-lg-0 social-media-icon justify-content-center align-items-center" target="_blank">
 							<TelegramIcon
 							fontSize="large"
 							sx={{ color: "white" }} />
