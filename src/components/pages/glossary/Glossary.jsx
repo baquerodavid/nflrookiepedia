@@ -172,7 +172,7 @@ function Glossary() {
         <div>
             <PagesHeader />
             <div className="container-fluid">
-                <div className="container-fluid glossary-header">
+                <div className="container-fluid custom-pages-header">
                     <p className="lead text-center">Aquí podrás encontrar desde la abreviatura del nombre de los equipos hasta detalles específicos como la altura en pies y centímetros, y el peso en libras y kilogramos. Utiliza este recurso para familiarizarte con las abreviaturas más utilizadas en el football 🏈.</p>
                     <div className="container text-center justify-content-center anchor-glossary">
                         <Button onClick={() => document.getElementById('teams-section').scrollIntoView({ behavior: 'smooth'})} className="mx-3 mb-3 mb-md-0" sx={{ fontSize: '1.125rem' }} color="inherit">
