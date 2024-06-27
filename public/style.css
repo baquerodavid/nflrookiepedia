@@ -74,6 +74,11 @@ body {
 	width: 90%;
 }
 
+.custom-pages-header {
+	width: 90%;
+	margin: 48px auto;
+}
+
 
 /* ---------- HOME PAGE ---------- */
 
@@ -127,11 +132,6 @@ body {
 
 .background-glossary {
 	background-color: #F5F5F5;
-}
-
-.glossary-header {
-	width: 90%;
-	margin: 48px auto;
 }
 
 .anchor-glossary {

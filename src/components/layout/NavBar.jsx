@@ -39,6 +39,7 @@ function NavBar({ handleSearch }) {
 						<li><NavLink to="/Teams" className="nav-link px-2">Equipos</NavLink></li>
 						<li><NavLink to="/Superbowls" className="nav-link px-2">Super Bowls</NavLink></li>
 						<li><NavLink to="/Glossary" className="nav-link px-2">Glosario</NavLink></li>
+						<li><NavLink to="/Formations" className="nav-link px-2">Formaciones</NavLink></li>
 					</ul>
 
 					<div className="nav mb-2 mb-md-0 justify-content-center align-items-center">
