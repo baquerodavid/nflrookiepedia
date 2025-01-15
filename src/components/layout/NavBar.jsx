@@ -36,10 +36,10 @@ function NavBar({ handleSearch }) {
 				<div className="navbar-collapse collapse" id="navbarNflr">
 					<ul id="navbarstyle" className="nav col-12 col-lg-auto me-lg-auto mb-3 mb-md-0 justify-content-center">
 						<li><NavLink to="/" className="nav-link px-2">Inicio</NavLink></li>
-						<li><NavLink to="/Teams" className="nav-link px-2">Equipos</NavLink></li>
-						<li><NavLink to="/Superbowls" className="nav-link px-2">Super Bowls</NavLink></li>
-						<li><NavLink to="/Glossary" className="nav-link px-2">Glosario</NavLink></li>
-						<li><NavLink to="/Formations" className="nav-link px-2">Formaciones</NavLink></li>
+						<li><NavLink to="/teams" className="nav-link px-2">Equipos</NavLink></li>
+						<li><NavLink to="/superbowls" className="nav-link px-2">Super Bowls</NavLink></li>
+						<li><NavLink to="/glossary" className="nav-link px-2">Glosario</NavLink></li>
+						<li><NavLink to="/formations" className="nav-link px-2">Formaciones</NavLink></li>
 					</ul>
 
 					<div className="nav mb-2 mb-md-0 justify-content-center align-items-center">

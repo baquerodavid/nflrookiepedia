@@ -1,10 +1,12 @@
 
 const routeConfig = [
     { path: "/", title: "Inicio" },
-    { path: "/Teams", title: "Equipos" },
-    { path: "/Superbowls", title: "Super Bowls" },
-    { path: "/Glossary", title: "Glosario" },
-    { path: "/Formations", title: "Formaciones" },
+    { path: "/teams", title: "Equipos" },
+    { path: "/superbowls", title: "Super Bowls" },
+    { path: "/glossary", title: "Glosario" },
+    { path: "/formations", title: "Formaciones" },
+    { path: "/cookies-policy", title: "Política de Cookies" },
+    { path: "/privacy-policy", title: "Política de Privacidad" },
     // Add more routes as needed
 ];
 
